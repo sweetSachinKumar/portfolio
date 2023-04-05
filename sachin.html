@@ -1,0 +1,752 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title>sachin kumar my portfolio website</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="css/all.css">
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+text-decoration:none;
+list-style:none;  
+}
+.img_size{
+width:100%;
+height:100%;
+}
+
+body{
+font-family:sans-serif;
+    scroll-behavior: smooth;
+}
+
+
+::-webkit-scrollbar{
+width: 10px;
+}
+
+::-webkit-scrollbar-track{
+background: transparent ;
+}
+
+::-webkit-scrollbar-thumb{
+background: linear-gradient(to bottom, #00c6a7, #1e4d92);
+border-radius: 12px;
+}
+ 
+
+/* utils */
+
+
+
+.my-100{
+margin: 100px 0;
+}
+
+
+
+
+.navbar{
+transition: all .3s ease-in-out;
+background: linear-gradient( 35deg, #00c6a7, #1e4d92);
+z-index: 1000;
+}
+
+
+
+i{
+color: #00c6a7;
+    font-size: 2.5rem;
+}
+h3{
+    color: #164ec8;
+}
+
+a{
+text-decoration:none;
+}
+li{
+list-style:none;
+}
+
+p{
+font-size: .9rem;
+    line-height: 1.5;
+    color: #606060;
+    font-weight: 400;
+}
+
+
+
+
+/* utils end */
+
+
+
+.navbar_top{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 100px;
+}
+.navbar p{
+color:white;
+}
+nav ul{
+    list-style: none;
+    display: flex;
+    gap: 3rem;
+    align-items: center;
+}
+
+.home_section{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 75vh;
+    background: linear-gradient(57deg, #00c6a7, #1e4d92);
+    clip-path: polygon(0 0, 0 100%, 100% 85%, 100% 0);
+}
+
+
+.left_side{
+flex-basis: 45%;
+}
+
+.right_side{
+    flex-basis: 55%;
+    text-align: center;
+    padding: 40px;
+    margin-top: 50px;
+}
+
+.my_btn{
+    background: linear-gradient(68deg, #00c6a7, #1e4d92);
+    font-size: 1rem;
+    padding: 15px 25px;
+    border: 1px solid rgba(0,0,0,0.6);
+    font-weight: bold;
+    transition: all .5s ease-in-out;
+
+}
+.my_btn:hover{
+    background: linear-gradient(-68deg, #00c6a7, #1e4d92);
+}
+
+.text-bold{
+font-weight: bold;
+}
+
+.extra_div{
+    background: white;
+    padding: 50px;
+    border-radius: 3px;
+    transition: all .3s ease-in-out;
+}
+
+.extra_div:hover{
+    box-shadow: 1px -1px 20px 5px rgb(0 0 0 / 10%);
+transform: translateY(-20px);
+}
+
+
+.design_navbar {
+    background: #58c3b2;
+    height: 65px;
+    box-shadow: 0 3px 19px 1px rgb(0 0 0 / 20%);
+margin-top: -6rem;
+position:fixed;
+top:0;
+left:0;
+right:0;
+
+}
+
+.design_navbar-show{
+margin-top: 0rem;
+}
+input,textarea{
+border:none;
+box-shadow:none;
+outline:none; 
+   border: 1px solid  #1717c5 !important;
+}
+
+
+textarea:hover, input:hover, textarea:active, textarea:focus,input:active, input:focus {
+    box-shadow: 0px 0px 6px 0px blueviolet ;
+}
+
+::placeholder{
+color:black;
+font-size: .9rem;
+}
+
+#contactus{
+    background: linear-gradient( 18deg, #097db0bf 48%, #fff 0%);
+}
+#qualification{
+    background: linear-gradient( -18deg, #097db0bf 48%, #fff 0%);
+}
+
+
+footer i, footer a{
+font-size:1rem;
+color:gray;
+}
+
+
+footer ul li:hover i{
+color:#0fb59b;
+}
+
+
+footer ul li:hover a{
+    color: #074eb7;
+}
+
+
+.scrollTop{
+    position: fixed;
+    bottom: 7%;
+    right: 5%;
+    background: #00c6a7;
+    border-radius: 0.4rem;
+    display: none;
+transition: all .3s ease-in-out;
+}
+
+.scrollTop > i{
+    font-size: 1.3rem;
+    padding: 12px;
+    border-radius: 10px;
+    color: white;
+}
+
+
+.scrollTop.show{
+display:block;
+animation: movedTop .5s ;
+}
+@keyframe movedTop {
+0%{
+bottom: 2%;
+}
+
+50%{
+bottom:7%;
+}
+100%{
+bottm:10%;
+}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 991px){
+
+.collapse{
+background: linear-gradient(35deg, rgb(0, 198, 167), rgb(30, 77, 146));
+}
+
+
+
+
+
+
+@media (max-width: 700px){
+.home_section{
+flex-direction: column;
+padding:10px 0;
+height: 100%;
+
+}
+.left_side, .right_side{
+flex-basis: auto;
+}
+
+.img-fluid {
+    max-width: 71%;
+     display: block;
+    margin: auto;
+    margin-top: 20px;
+}
+ 
+
+
+}
+
+
+.btn_text a{
+color:white;
+}
+
+</style>
+
+
+</head>
+<body  data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="80" >
+ 
+
+  <nav class="navbar navbar-expand-lg navbar-dark   ">
+  <div class="container p-2 text-uppercase">
+    <a class="navbar-brand fs-2 text-bold" href="#"> <span class="text-primary fs-1">S</span>achin <span class="text-primary fs-2">K</span>umar</a>
+    <button class="navbar-toggler  " type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon  "></span>
+    </button>
+    <div class="collapse navbar-collapse"  id="navbarNavAltMarkup">
+      <div class="navbar-nav text-center ms-auto fs-6">
+        <a class="nav-link active" aria-current="page" href="#home">Home</a>
+        <a class="nav-link" href="#service">Service</a>
+        <a class="nav-link" href="#qualification">Qualification</a>
+        <a class="nav-link" href="#project">Project</a>
+        <a class="nav-link" href="#contactus">Contact</a> 
+       
+      </div>
+    </div>
+  </div>
+</nav>
+
+
+<section class="home_section text-white" id="home">
+
+
+
+<div class="left_side">
+<img src="img/team.svg" class="img-fluid" alt="team">
+</div>
+
+<div class="right_side">
+<h2 class=" text-uppercase fs-1 text-bold"> I create modern website</h2>
+<p class="fs-6 text-white" > I design and code beautifully simple things, and I love what I do. </p>
+
+<button class="my_btn text-white"> <a class="text-white" href="Sachinkumar.docx" download="cv sachin"> download cv </a> </button>
+</div>
+
+
+</section>
+
+
+
+
+<section class="container bg-light  py-5 my-5" id="service">
+
+<div class="row">
+
+<div class="col-12 col-md-6 p-3">
+<h3 class=" ps-1 mb-4" > Frontend Developer </h3>
+
+<p class="fs-4">I value simple content structure, clean design patterns, and thoughtful interactions.
+</p>
+<p class="mt-4"> Languages i use</p>
+<div> html, css, javaScript</div>
+</div>
+
+<div class="col-12 col-md-6 ">
+<img src="img/web_developer.svg" class="img-fluid" alt="skills">
+
+</div>
+</div>
+
+</section>
+
+
+
+
+
+
+<section class="container my-5 py-5"  id="qualification" >
+<h3 class="fs-2 text-center py-5 "> My Qualification </h3>
+<div class="row">
+
+<div class="col-12 col-md-6 col-lg-6">
+
+<h2> <span class="text-info fs-2 text-bold text-uppercase"> Languages </span> i Know </h2>
+
+<div class="lang_div my-3">
+<h4 class="fs-4">HTML </h4>
+<div class="progress">
+  <div class="progress-bar progress-bar-striped" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+</div>
+</div>
+
+<div class="lang_div my-3">
+<h4 class="fs-4">CSS </h4>
+<div class="progress">
+  <div class="progress-bar progress-bar-striped  bg-success" role="progressbar" style="width: 70%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+</div>
+</div>
+
+
+<div class="lang_div my-3">
+<h4 class="fs-4">Java Script </h4>
+<div class="progress">
+  <div class="progress-bar progress-bar-striped bg-danger" role="progressbar" style="width: 68%" aria-valuenow="68" aria-valuemin="0" aria-valuemax="100"></div>
+</div>
+</div>
+
+<div class="lang_div my-3">
+<h4 class="fs-4">React <small class="fs-6 text-danger">currently i'm learning</small></h4>
+<div class="progress"> 
+  <div class="progress-bar progress-bar-striped bg-info" role="progressbar" style="width: 30%" aria-valuenow="30%" aria-valuemin="0" aria-valuemax="100"></div>
+</div>
+</div>
+
+
+</div>
+
+
+<div class="col-12 col-md-6 col-lg-4 py-3 px-4  ">
+
+<div class="quali_div my-4">
+<h4 class="text-info text-uppercase"> Skills</h4>
+<li class="ms-4"> Front end web developer </li> 
+</div>
+
+<div class="quali_div my-4">
+<h4 class="text-info text-uppercase"> Experince</h4>
+<p class="ms-4"> I am fresher </p>
+</div>
+
+
+
+
+
+<div class="quali_div my-4"> 
+<h5 class="text-info text-uppercase"> qualification </h5>
+<ul class="ms-3 lh-small">
+<li> 10<sup>th</sup> Pass </li>
+<li> 12<sup>th</sup> Pass </li>
+<li> Pursuing bca in first years</li>
+</ul> 
+
+</div>
+
+
+
+
+
+</div>
+
+
+
+</div>
+
+
+</section>
+
+
+
+
+<section class="project my-5 py-5 container bg-light" id="project">
+<h3 class="text-center fs-2 p-4 mb-3 "> my Java Script Project </h3>
+
+<div class="row mb-5">
+<div class="col-8 offset-2 offset-md-0   col-md-6">
+<a href="https://sweetsachinkumar.github.io/noteTaker/noteTaker.html" target="_sachin">
+<div class="card mb-3" style="max-width: 540px;">
+  <div class="row g-0">
+    <div class="col-md-4 ">
+      <img src="img/notetaker.jpg" class="img-fluid rounded-start img_size" alt="...">
+    </div>
+    <div class="col-md-8 mt-4 mt-md-0">
+      <div class="card-body">
+        <h5 class="card-title">Note Taker website</h5>
+        <p class="card-text">This note taker app can store your note and it has two kind of input, first on for title
+and other one for your details. <br/> The best part is all note will be stored in your local computer.</p>
+        <p class="card-text"><small class="text-muted">Click on this card to visit note taker website </small> </p>
+      </div>
+    </div>
+  </div>
+</div>
+</a>
+</div>
+
+<div class="col-8 offset-2 offset-md-0   col-md-6">
+<a href="https://sweetsachinkumar.github.io/tic-tac-toe-/tictactoe.html"  target="_sachin">
+<div class="card mb-3" style="max-width: 540px;">
+  <div class="row g-0">
+    <div class="col-md-4">
+      <img src="img/tictac.jpg" class="img-fluid rounded-start img_size" alt="...">
+    </div>
+    <div class="col-md-8 mt-4 mt-md-0">
+      <div class="card-body">
+        <h5 class="card-title">Tic Tac Toe website</h5>
+        <p class="card-text">This Tic Tac Toe Game is working very well and if you play and any one wins then a button will pop up and if you click game will restart.
+<br/> Playing this game is very fun.</p>
+        <p class="card-text"><small class="text-muted">Click on this card to visit Tic Tac Toe game website </small> </p>
+      </div>
+    </div>
+  </div>
+</div>
+</a>
+</div>
+ 
+
+
+
+</div>
+
+
+<h3 class="text-center fs-2 p-4 mb-3 "> my html,css, and js Project </h3>
+
+<div class="row">
+<div class="col-10 offset-1 col-md-4">
+<a href="https://sweetsachinkumar.github.io/blog/blog.html" target="_sachin">
+
+<div class="card" style="width: 18rem;">
+  <img src="img/blog.jpg" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">Blog website</h5>
+  <p> this is my blog website. here i covered two topics first one is about Healthy Lifestyle and <br/> Another one is about best laptop in 2023.</p>
+  </div>
+   
+  
+</div>
+</a>
+</div>
+
+<div class="col-10 offset-1 col-md-4">
+<a href="https://sweetsachinkumar.github.io/clone/myntraClone.html" target="_sachin">
+
+<div class="card" style="width: 18rem;">
+  <img src="img/myntra.png" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">Myntra clone website</h5>
+  <p> I try to creat a clone of myntra website. in this webiste the Main thing is responsive navbar. <br/> I try to create this clone website exactly like real myntra website.</p>
+  </div>
+   
+  
+</div>
+</a>
+</div>
+
+
+
+</div>
+
+
+
+
+
+
+
+</section>
+
+
+
+
+<section class="container my-5 py-4" id="contactus" >
+<h3 class="text-center fs-2 p-4 mb-3"> Feel free to connect </h3>
+<div class="col-10 offset-1">
+<form class="row g-3 form " method="post" name="google-sheet"  >
+  <div class="col-md-12">
+    <input type="text" name="Name" class="form-control" placeholder="enter your name" autocomplet="off" required id="inputEmail4">
+  </div>
+
+
+  <div class="col-md-12">
+    <input type="email" name="Email" class="form-control" placeholder="your email" autocomplet="off" required id="inputEmail4">
+  </div>
+
+
+  <div class="col-md-12">
+    <input type="tel" name="Phone" placeholder="your  mobile number"  class="form-control" id="inputPassword4" autocomplet="off" required>
+  </div>
+ 
+<div class="col-md-12">
+ <textarea class="form-control" name="Massage"  placeholder="leave your massage" rows="5" id="comment" > </textarea>
+</div>
+  
+  <div class=" d-flex form-button justify-content-center">
+    <button type="submit" class=" my_btn text-white rounded fs-5" name="submit" >submit</button>
+  </div>
+</form>
+</div>
+</section>
+<!--
+<footer >
+<div class="row">
+<div class="col-xl-10 mb-3">
+<ul class="d-flex flex-column flex-md-row justify-content-start justify-content-md-around">
+<li> <a href="#"> <i class="fa-sharp fa-solid fa-phone me-1 "></i> 77038 49283 </a></li>
+<li> <a href="#"><i class="fa-solid fa-envelope me-1 "></i> sachinDev@gmail.com  </a></li>
+<li> <a href="#"> <i class="fa-solid fa-location-dot me-1 "></i> kapashera New Delhi 110037 </a></li>
+
+</ul>
+
+
+</div>
+
+<div class="col-xl-4">
+
+<ul class="list-unstyled d-flex   justify-content-center justify-content-xl-end">
+<li class="mb-3 mb-md-0">
+<a href="#"> <i class="fa-brands fa-square-facebook me-3 fs-3"></i> </a>
+</li>
+
+<li class="mb-3 mb-md-0">
+<a href="#"> <i class="fa-brands fa-square-instagram me-3 fs-3"></i>  </a>
+</li>
+
+
+
+<li class="mb-3 mb-md-0">
+<a href="#"> <i class="fa-brands fa-square-twitter fs-3"></i>   </a>
+</li>
+
+
+
+</ul>
+
+</div>
+
+
+</div>
+
+</footer>
+
+-->
+
+
+
+
+
+
+
+
+<footer class="py-2 mt-3 bg-light overflow-hidden">
+<div class="row justify-content-md-center">
+<div class="col-xl-8">
+<ul class="d-flex justify-content-start flex-column flex-md-row justify-content-md-around">
+<li class="mb-3 mb-md-0"> 
+<a href="#" >  <i class="fa-sharp fa-solid fa-phone me-1  "></i> 77038 49283 </a>
+</li>
+
+
+<li class="mb-3 mb-md-0"> 
+<a href="#"> <i class="fa-solid fa-envelope me-1 "></i> sachinDev@gmail.com  </a>
+</li>
+
+
+<li class="mb-3 mb-md-0"> 
+<a href="#">  <i class="fa-solid fa-location-dot me-1 "></i> kapashera New Delhi 110037 </a>
+</li>
+
+
+
+</ul>
+</div>
+
+
+<div class="col-xl-4">
+<ul class="d-flex   justify-content-center justify-content-xl-end">
+
+<li class="mb-3 mb-md-0">
+<a target="_sachin" href="https://www.facebook.com/profile.php?id=100031395428219"> <i class="fa-brands fa-square-facebook me-3 fs-3"></i> </a>
+</li>
+
+<li class="mb-3 mb-md-0">
+<a target="_sachin" href="https://www.instagram.com/sach_in115/"> <i class="fa-brands fa-square-instagram me-3 fs-3"></i>  </a>
+</li>
+
+
+
+<li class="mb-3 mb-md-0">
+<a  target="_sachin" href="https://twitter.com/Sachin369kumar"> <i class="fa-brands fa-square-twitter fs-3"></i>   </a>
+</li>
+
+
+</ul>
+
+<div class="scrollTop">
+<i class="fa-solid fa-arrow-up" onclick="topFunction()" id="myBtn"></i>
+</div>
+
+</div>
+
+
+</div>
+
+
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="js/bootstrap.bundle.min.js "> </script>
+ 
+<script src="js/script.js"> </script>
+
+
+
+
+<script>
+
+const scriptURL = 'https://script.google.com/macros/s/AKfycbz0jequb-dZiEkZyRlwgVJZclkAL89FoCvbDDAdqaQ5wvVSH1nE1meHNwlzcZ9LiYHf/exec'
+const form = document.forms['google-sheet']
+
+form.addEventListener('submit', e=> { 
+e.preventDefault()
+fetch(scriptURL, {method:'POST', body: new FormData(form)})
+.then(response => alert("Thanks for Contacting us..! We will Contact You Soon..."))
+.catch(error => console.error('Error!', error.massage))
+
+
+ })
+
+
+
+
+
+
+
+
+</script>
+
+
+
+
+
+
+</body>
+</html>
